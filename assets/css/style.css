@@ -1,5 +1,5 @@
 /* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 /* Vairables */
 :root {
@@ -19,7 +19,7 @@
   --white-color: #fff;
 
   /* Font Family and Size */
-  --body-font: "Montserrat", sans-serif;
+  --body-font: "Poppins", sans-serif;
   --small-font-size: 0.813rem;
   --normal-font-size: 0.938rem;
   --big-font-size: 1.25rem;
