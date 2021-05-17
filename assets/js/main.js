@@ -1,12 +1,5 @@
-$(function() {
-    $(window).on("load", function() {
-      $('.preloader').fadeOut('slow', function() {
-        $(this).remove();
-      });
-    });
-  });
 /* Menu Show */
-const showMenu = (toggleId, navId) => { 
+const showMenu = (toggleId, navId) => {
     const toggle = document.getElementById(toggleId),
     menu = document.getElementById(navId);
 
@@ -19,6 +12,13 @@ const showMenu = (toggleId, navId) => {
 
 showMenu("nav-toggle", "nav-menu");
 
+$(function() {
+    $(window).on("load", function() {
+      $('.preloader').fadeOut('slow', function() {
+        $(this).remove();
+      });
+    });
+  });
 
 /* Remove menu */
 const navLink = document.querySelectorAll(".nav__link"),
@@ -58,3 +58,30 @@ window.onscroll = () => {
     if(this.scrollY >=200) nav.classList.add("scroll-header"); 
     else nav.classList.remove("scroll-header");
 };
+
+//////////////Scroll Reveal animations
+const sr = ScrollReveal({
+    distance: "40px",
+    duration: 2200,
+    reset: true,
+  });
+
+  sr.reveal(
+    `.section-title, .offer__data, .footer__box`,
+    {
+      origin: "top",
+      interval: 400,
+    }
+  );
+
+  sr.reveal(`.home__data, .new__mens, .newsletter`, {
+    origin: "left",
+  });
+
+  sr.reveal(`.featured__container, .offer__img`, {
+    origin: "right",
+  });
+
+  sr.reveal(`.home__hero, .collection__card,  .new__sneaker-card , .newsletter__subscribe`, {
+    origin: "bottom",
+  });
